@@ -2,6 +2,10 @@ set shell=/bin/sh
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" Yank to clipboard by default. 
+set clipboard=unnamed
+
+
 """"""" PLUGINS """""""""
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -30,6 +34,8 @@ Plugin 'godlygeek/tabular'
 " Plugin 'Valloric/YouCompleteMe'
 " Tmux Navigation
 Plugin 'christoomey/vim-tmux-navigator'
+" Tmux.conf highlighting
+Plugin 'tmux-plugins/vim-tmux'
 
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -53,6 +59,9 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 
 " Force Gdiff to use vertical splits
 set diffopt+=vertical
+
+" Use mouse in terminal
+set mouse=a
 
 """"""" VISUAL ENHANCEMENTS """""""""
 set number        " Show line numbers
