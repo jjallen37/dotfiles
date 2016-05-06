@@ -62,6 +62,7 @@ set diffopt+=vertical
 
 " Use mouse in terminal
 set mouse=a
+set ttymouse=sgr
 
 """"""" VISUAL ENHANCEMENTS """""""""
 set number        " Show line numbers
