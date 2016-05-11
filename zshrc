@@ -53,8 +53,17 @@ plugins=(git)
 
 # User configuration
 
-  export PATH="/Users/ibmjja/anaconda2/bin:/Users/ibmjja/anaconda/bin:/Users/ibmjja/.nvm/versions/node/v0.12.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/IBM/MobileFirst-CLI:/Applications/IBM/MobileFirst-CLI:/Applications/IBM/MobileFirst-CLI:/Applications/IBM/MobileFirst-CLI:/Applications/IBM/MobileFirst-CLI:/Applications/IBM/MobileFirst-CLI:/Applications/IBM/MobileFirst-CLI:/Users/ibmjja/Library/Android/sdk/platform-tools:/Users/ibmjja/Library/Android/sdk/tools:/Users/ibmjja/bin"
+#  export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/ibmjja/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
+export NVM_DIR="/Users/ibmjja/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Add adb, android to path. Add Java_home
+export JAVA_HOME=$(/usr/libexec/java_home)
+export ANDROID_HOME=/Users/ibmjja/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:/Users/ibmjja/bin
 
 source $ZSH/oh-my-zsh.sh
 
