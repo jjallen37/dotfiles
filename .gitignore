@@ -1,0 +1,8 @@
+### OS Files
+.jazz*
+**/.DS_Store
+
+# Vim swap files
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+

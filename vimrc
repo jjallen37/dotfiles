@@ -4,6 +4,7 @@ filetype off                  " required
 
 " Yank to clipboard by default. 
 set clipboard=unnamed
+set paste                     " Pasting into vim acts normal
 
 
 """"""" PLUGINS """""""""
@@ -36,6 +37,12 @@ Plugin 'godlygeek/tabular'
 Plugin 'christoomey/vim-tmux-navigator'
 " Tmux.conf highlighting
 Plugin 'tmux-plugins/vim-tmux'
+" Javascript highlighting & indention
+Plugin 'pangloss/vim-javascript'
+" Node navigation
+Plugin 'moll/vim-node'
+" Tagbar navigation for ctags
+Plugin 'majutsushi/tagbar'
 
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -65,8 +72,9 @@ set mouse=a
 set ttymouse=sgr
 
 """"""" VISUAL ENHANCEMENTS """""""""
-set number        " Show line numbers
-syntax enable     " Use syntax highlighting
+set number            " Show relative line numbers
+set relativenumber    " Show line numbers
+syntax enable         " Use syntax highlighting
 set background=dark
 " let g:solarized_termcolors = 256 " Use to make even darker
 colorscheme solarized
@@ -82,6 +90,7 @@ set softtabstop=2
 set smarttab
 " " always uses spaces instead of tab characters
 set expandtab
+
 
 """"""" REMAPPINGS """""""""
 " Toggle nerd tree side bar
