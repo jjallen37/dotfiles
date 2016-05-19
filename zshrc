@@ -7,6 +7,10 @@
 # time that oh-my-zsh is loaded.
 ZSH_THEME="agnoster" # (this is one of the fancy ones)
 
+# For ZSH theme agnoster
+# Optionally set DEFAULT_USER in ~/.zshrc to your regular username to hide the “user@hostname” info when you’re logged in as yourself on your local machine.
+DEFAULT_USER="ibmjja"
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
