@@ -43,6 +43,9 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'moll/vim-node'
 " Tagbar navigation for ctags
 Plugin 'majutsushi/tagbar'
+" Airline for pretty vim
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -68,8 +71,14 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 set diffopt+=vertical
 
 " Use mouse in terminal
-set mouse=a
-set ttymouse=sgr
+
+if has('mouse')
+  set mouse=a
+  set ttymouse=sgr
+endif
+
+" faster redrawing
+set ttyfast
 
 """"""" VISUAL ENHANCEMENTS """""""""
 set number            " Show relative line numbers
@@ -90,6 +99,13 @@ set softtabstop=2
 set smarttab
 " " always uses spaces instead of tab characters
 set expandtab
+
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 
 """"""" REMAPPINGS """""""""
